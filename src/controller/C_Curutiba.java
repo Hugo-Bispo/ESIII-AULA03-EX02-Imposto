@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 import model.Cidades;
 import model.Curitiba;
 
-public class C_Curutiba implements Imposto {
+public class C_Curutiba extends Controller_Imposto implements Imposto {
 
-	public Cidades calculoimposto() {
+	public Curitiba calculoimposto(Cidades cidade) {
 		Curitiba curitiba = new Curitiba();
 		curitiba.setArea(Double.parseDouble(JOptionPane.showInputDialog("Digite Area do Imovel:")));
 		curitiba.setIdade_imovel(Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do Imovel:")));
@@ -18,7 +18,6 @@ public class C_Curutiba implements Imposto {
 		} else {
 			curitiba.setImposto((curitiba.getArea() * 5) + (curitiba.getIdade_imovel() * 3));
 		}
-		System.out.println(curitiba.toString());
 		return curitiba;
 	}
 

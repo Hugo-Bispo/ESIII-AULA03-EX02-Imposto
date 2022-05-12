@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 import model.Cidades;
 import model.SaoPaulo;
 
-public class C_SaoPaulo extends Controller_Imposto implements Imposto{
+public class C_SaoPaulo extends Controller_Imposto implements Imposto {
 
-	public Cidades calculoimposto() {
+	public SaoPaulo calculoimposto(Cidades cidade) {
 		SaoPaulo sp = new SaoPaulo();
 		sp.setArea(Double.parseDouble(JOptionPane.showInputDialog("Digite Area do Imovel:")));
 		sp.setQtd_comodos(Integer.parseInt(JOptionPane.showInputDialog("Digite a Quantidade de cômodos do Imovel:")));

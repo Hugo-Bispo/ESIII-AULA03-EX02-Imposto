@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 import model.Cidades;
 import model.PortoAlegre;
 
-public class C_PortoAlegre implements Imposto {
+public class C_PortoAlegre extends Controller_Imposto implements Imposto {
 
-	public Cidades calculoimposto() {
+	public PortoAlegre calculoimposto(Cidades cidade) {
 		PortoAlegre pa = new PortoAlegre();
 		pa.setArea(Double.parseDouble(JOptionPane.showInputDialog("Digite Area do Imovel:")));
 		pa.setArea_garagem(Double.parseDouble(JOptionPane.showInputDialog("Digite Area da Garagem:")));
@@ -16,9 +16,7 @@ public class C_PortoAlegre implements Imposto {
 		} else {
 			pa.setImposto((pa.getArea() * 8));
 		}
-		System.out.println(pa.toString());
 		return pa;
 	}
-	
 
 }
